@@ -1,0 +1,154 @@
+{
+  "source": "Curated general pharmacy reference for the eight ATC groups in the sales dataset, plus platform operations notes.",
+  "documents": [
+    {
+      "id": "atc-M01AB",
+      "atc": "M01AB",
+      "title": "Acetic acid NSAIDs (M01AB)",
+      "category": "M01AB",
+      "kind": "drug_group",
+      "text": "Acetic acid NSAIDs (M01AB). Anti-inflammatory and antirheumatic, non-steroidal. Common drugs: Diclofenac, Indometacin, Ketorolac, Aceclofenac. Includes Diclofenac, Indometacin, Ketorolac, Aceclofenac. Uses: Short term relief of pain, inflammation and stiffness in joints and muscles, including arthritis and acute injury. Seasonality: Fairly steady through the year with mild winter demand. Storage: Store below 25 C in a dry place, away from direct light. Cautions: Can irritate the stomach lining and affect kidney function. Taken with food. Avoided in active stomach ulcers.",
+      "examples": [
+        "Diclofenac",
+        "Indometacin",
+        "Ketorolac",
+        "Aceclofenac"
+      ]
+    },
+    {
+      "id": "atc-M01AE",
+      "atc": "M01AE",
+      "title": "Propionic acid NSAIDs (M01AE)",
+      "category": "M01AE",
+      "kind": "drug_group",
+      "text": "Propionic acid NSAIDs (M01AE). Anti-inflammatory and antirheumatic, non-steroidal. Common drugs: Ibuprofen, Naproxen, Ketoprofen, Dexibuprofen. Includes Ibuprofen, Naproxen, Ketoprofen, Dexibuprofen. Uses: Everyday pain, fever, period pain and inflammatory conditions. Ibuprofen is one of the most common over the counter analgesics. Seasonality: Rises during cold and flu season in autumn and winter. Storage: Store below 25 C in a dry place. Cautions: Use the lowest effective dose. Caution in asthma, stomach problems and pregnancy.",
+      "examples": [
+        "Ibuprofen",
+        "Naproxen",
+        "Ketoprofen",
+        "Dexibuprofen"
+      ]
+    },
+    {
+      "id": "atc-N02BA",
+      "atc": "N02BA",
+      "title": "Salicylic acid analgesics (N02BA)",
+      "category": "N02BA",
+      "kind": "drug_group",
+      "text": "Salicylic acid analgesics (N02BA). Other analgesics and antipyretics. Common drugs: Aspirin (acetylsalicylic acid), Diflunisal. Includes Aspirin (acetylsalicylic acid), Diflunisal. Uses: Pain and fever relief. Low dose aspirin is also used long term to reduce the risk of blood clots under medical supervision. Seasonality: Steady demand with a small winter lift. Storage: Store below 25 C, keep the pack tightly closed. Cautions: Not given to children under 16 due to the risk of Reye syndrome. Increases bleeding risk.",
+      "examples": [
+        "Aspirin (acetylsalicylic acid)",
+        "Diflunisal"
+      ]
+    },
+    {
+      "id": "atc-N02BE",
+      "atc": "N02BE",
+      "title": "Anilide analgesics (N02BE)",
+      "category": "N02BE",
+      "kind": "drug_group",
+      "text": "Anilide analgesics (N02BE). Other analgesics and antipyretics. Common drugs: Paracetamol (acetaminophen), Metamizole, Phenacetin. Includes Paracetamol (acetaminophen), Metamizole, Phenacetin. Uses: First line relief of mild to moderate pain and fever. The highest volume analgesic group in most pharmacies. Seasonality: Strong peaks during winter cold and flu season. Storage: Store below 25 C in a dry place. Cautions: Keep within the daily maximum. Overdose can cause serious liver harm, so total paracetamol from all products is tracked.",
+      "examples": [
+        "Paracetamol (acetaminophen)",
+        "Metamizole",
+        "Phenacetin"
+      ]
+    },
+    {
+      "id": "atc-N05B",
+      "atc": "N05B",
+      "title": "Anxiolytics (N05B)",
+      "category": "N05B",
+      "kind": "drug_group",
+      "text": "Anxiolytics (N05B). Psycholeptics. Common drugs: Diazepam, Alprazolam, Lorazepam, Bromazepam. Includes Diazepam, Alprazolam, Lorazepam, Bromazepam. Uses: Short term relief of severe anxiety and related tension. Prescription only and dispensed with care. Seasonality: Stable demand with little seasonal pattern. Storage: Store below 25 C. Controlled stock with restricted access. Cautions: Risk of dependence with longer use. Avoided with alcohol. Dispensed strictly against a valid prescription.",
+      "examples": [
+        "Diazepam",
+        "Alprazolam",
+        "Lorazepam",
+        "Bromazepam"
+      ]
+    },
+    {
+      "id": "atc-N05C",
+      "atc": "N05C",
+      "title": "Hypnotics and sedatives (N05C)",
+      "category": "N05C",
+      "kind": "drug_group",
+      "text": "Hypnotics and sedatives (N05C). Psycholeptics. Common drugs: Zolpidem, Nitrazepam, Zopiclone, Melatonin. Includes Zolpidem, Nitrazepam, Zopiclone, Melatonin. Uses: Short term treatment of sleep problems. Lowest volume group in the dataset and tightly controlled. Seasonality: Low and steady volume. Storage: Store below 25 C. Controlled stock with restricted access. Cautions: Intended for short courses. Can affect next day alertness and driving.",
+      "examples": [
+        "Zolpidem",
+        "Nitrazepam",
+        "Zopiclone",
+        "Melatonin"
+      ]
+    },
+    {
+      "id": "atc-R03",
+      "atc": "R03",
+      "title": "Airway disease drugs (R03)",
+      "category": "R03",
+      "kind": "drug_group",
+      "text": "Airway disease drugs (R03). Drugs for obstructive airway diseases. Common drugs: Salbutamol, Budesonide, Formoterol, Ipratropium. Includes Salbutamol, Budesonide, Formoterol, Ipratropium. Uses: Relief and prevention of asthma and chronic obstructive pulmonary disease, mostly as inhalers. Seasonality: Peaks in cold months and during high pollen periods. Storage: Store below 25 C. Inhaler canisters are kept away from heat and are not pierced or burned. Cautions: Reliever and preventer inhalers have different roles. Patients are shown correct inhaler technique.",
+      "examples": [
+        "Salbutamol",
+        "Budesonide",
+        "Formoterol",
+        "Ipratropium"
+      ]
+    },
+    {
+      "id": "atc-R06",
+      "atc": "R06",
+      "title": "Systemic antihistamines (R06)",
+      "category": "R06",
+      "kind": "drug_group",
+      "text": "Systemic antihistamines (R06). Antihistamines for systemic use. Common drugs: Cetirizine, Loratadine, Diphenhydramine, Fexofenadine. Includes Cetirizine, Loratadine, Diphenhydramine, Fexofenadine. Uses: Hay fever, allergic rhinitis, hives and other allergic reactions. Some older ones also help with short term sleep. Seasonality: Strong spring and summer peak driven by pollen. Storage: Store below 25 C in a dry place. Cautions: Older antihistamines can cause drowsiness. Newer ones are less sedating and preferred for daytime use.",
+      "examples": [
+        "Cetirizine",
+        "Loratadine",
+        "Diphenhydramine",
+        "Fexofenadine"
+      ]
+    },
+    {
+      "id": "ops-reorder",
+      "atc": null,
+      "title": "How reorder points work",
+      "category": null,
+      "kind": "operations",
+      "text": "A reorder point is the stock level that triggers a new order. In this platform it is the forecast demand over the supplier lead time plus a safety buffer sized from recent demand variability. When stock on hand falls to or below the reorder point the item is flagged for restocking."
+    },
+    {
+      "id": "ops-safety-stock",
+      "atc": null,
+      "title": "Safety stock",
+      "category": null,
+      "kind": "operations",
+      "text": "Safety stock covers demand that is higher than expected during the lead time. It is larger for items whose daily sales swing a lot and smaller for steady sellers. It protects against stockouts without tying up cash in excess inventory."
+    },
+    {
+      "id": "ops-expiry",
+      "atc": null,
+      "title": "Expiry management",
+      "category": null,
+      "kind": "operations",
+      "text": "Stock is dispensed oldest batch first so that medicines are used well before their expiry date. Batches within 90 days of expiry are flagged early, and anything within 30 days is treated as urgent so it can be used, returned or written off before it becomes waste."
+    },
+    {
+      "id": "ops-anomaly",
+      "atc": null,
+      "title": "Unusual sales days",
+      "category": null,
+      "kind": "operations",
+      "text": "An unusual sales day is one where the quantity sold is far from what recent history and the day of week would predict. These days are worth a quick check for data entry errors, local demand spikes, or possible stock shrinkage."
+    },
+    {
+      "id": "ops-forecast",
+      "atc": null,
+      "title": "How the demand forecast is made",
+      "category": null,
+      "kind": "operations",
+      "text": "Daily demand for each drug group is predicted with a gradient boosted tree model that reads recent sales, the day of week, the time of year and rolling averages. It is compared against a simple same weekday baseline so the reported accuracy is honest."
+    }
+  ]
+}

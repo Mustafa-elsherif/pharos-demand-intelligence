@@ -1,0 +1,459 @@
+{
+  "as_of": "2019-10-08",
+  "lead_time_days": 7,
+  "service_level": "95%",
+  "n_products": 15,
+  "inventory_value_units": 796,
+  "items": [
+    {
+      "product_id": 1,
+      "name": "Diclofenac 50mg tablets",
+      "pack": "x30",
+      "category": "M01AB",
+      "category_name": "Acetic acid NSAIDs",
+      "on_hand": 38,
+      "reorder_point": 30,
+      "cover_days": 12.3,
+      "batches": [
+        {
+          "batch_no": "B011",
+          "qty": 23,
+          "expiry": "2020-02-25",
+          "days_to_expiry": 140
+        },
+        {
+          "batch_no": "B012",
+          "qty": 6,
+          "expiry": "2021-05-02",
+          "days_to_expiry": 572
+        },
+        {
+          "batch_no": "B013",
+          "qty": 9,
+          "expiry": "2019-10-02",
+          "days_to_expiry": -6
+        }
+      ]
+    },
+    {
+      "product_id": 2,
+      "name": "Ketorolac 10mg tablets",
+      "pack": "x20",
+      "category": "M01AB",
+      "category_name": "Acetic acid NSAIDs",
+      "on_hand": 29,
+      "reorder_point": 18,
+      "cover_days": 15.6,
+      "batches": [
+        {
+          "batch_no": "B021",
+          "qty": 17,
+          "expiry": "2020-08-05",
+          "days_to_expiry": 302
+        },
+        {
+          "batch_no": "B022",
+          "qty": 5,
+          "expiry": "2020-03-31",
+          "days_to_expiry": 175
+        },
+        {
+          "batch_no": "B023",
+          "qty": 7,
+          "expiry": "2020-03-15",
+          "days_to_expiry": 159
+        }
+      ]
+    },
+    {
+      "product_id": 3,
+      "name": "Ibuprofen 400mg tablets",
+      "pack": "x24",
+      "category": "M01AE",
+      "category_name": "Propionic acid NSAIDs",
+      "on_hand": 25,
+      "reorder_point": 26,
+      "cover_days": 8.9,
+      "batches": [
+        {
+          "batch_no": "B031",
+          "qty": 13,
+          "expiry": "2022-01-02",
+          "days_to_expiry": 817
+        },
+        {
+          "batch_no": "B032",
+          "qty": 12,
+          "expiry": "2021-07-17",
+          "days_to_expiry": 648
+        }
+      ]
+    },
+    {
+      "product_id": 4,
+      "name": "Naproxen 250mg tablets",
+      "pack": "x28",
+      "category": "M01AE",
+      "category_name": "Propionic acid NSAIDs",
+      "on_hand": 20,
+      "reorder_point": 16,
+      "cover_days": 11.8,
+      "batches": [
+        {
+          "batch_no": "B041",
+          "qty": 13,
+          "expiry": "2020-03-24",
+          "days_to_expiry": 168
+        },
+        {
+          "batch_no": "B042",
+          "qty": 7,
+          "expiry": "2020-02-08",
+          "days_to_expiry": 123
+        }
+      ]
+    },
+    {
+      "product_id": 5,
+      "name": "Aspirin 300mg tablets",
+      "pack": "x32",
+      "category": "N02BA",
+      "category_name": "Salicylic acid analgesics",
+      "on_hand": 34,
+      "reorder_point": 27,
+      "cover_days": 11.8,
+      "batches": [
+        {
+          "batch_no": "B051",
+          "qty": 34,
+          "expiry": "2019-11-02",
+          "days_to_expiry": 25
+        }
+      ]
+    },
+    {
+      "product_id": 6,
+      "name": "Paracetamol 500mg tablets",
+      "pack": "x32",
+      "category": "N02BE",
+      "category_name": "Anilide analgesics",
+      "on_hand": 143,
+      "reorder_point": 133,
+      "cover_days": 9.2,
+      "batches": [
+        {
+          "batch_no": "B061",
+          "qty": 143,
+          "expiry": "2021-01-04",
+          "days_to_expiry": 454
+        }
+      ]
+    },
+    {
+      "product_id": 7,
+      "name": "Paracetamol 500mg capsules",
+      "pack": "x16",
+      "category": "N02BE",
+      "category_name": "Anilide analgesics",
+      "on_hand": 186,
+      "reorder_point": 106,
+      "cover_days": 15.0,
+      "batches": [
+        {
+          "batch_no": "B071",
+          "qty": 94,
+          "expiry": "2021-02-03",
+          "days_to_expiry": 484
+        },
+        {
+          "batch_no": "B072",
+          "qty": 36,
+          "expiry": "2019-10-09",
+          "days_to_expiry": 1
+        },
+        {
+          "batch_no": "B073",
+          "qty": 56,
+          "expiry": "2020-04-06",
+          "days_to_expiry": 181
+        }
+      ]
+    },
+    {
+      "product_id": 8,
+      "name": "Paracetamol 120mg/5ml suspension",
+      "pack": "100ml",
+      "category": "N02BE",
+      "category_name": "Anilide analgesics",
+      "on_hand": 110,
+      "reorder_point": 80,
+      "cover_days": 11.8,
+      "batches": [
+        {
+          "batch_no": "B081",
+          "qty": 41,
+          "expiry": "2020-09-29",
+          "days_to_expiry": 357
+        },
+        {
+          "batch_no": "B082",
+          "qty": 69,
+          "expiry": "2019-10-02",
+          "days_to_expiry": -6
+        }
+      ]
+    },
+    {
+      "product_id": 9,
+      "name": "Diazepam 5mg tablets",
+      "pack": "x28",
+      "category": "N05B",
+      "category_name": "Anxiolytics",
+      "on_hand": 81,
+      "reorder_point": 50,
+      "cover_days": 14.7,
+      "batches": [
+        {
+          "batch_no": "B091",
+          "qty": 32,
+          "expiry": "2022-12-06",
+          "days_to_expiry": 1155
+        },
+        {
+          "batch_no": "B092",
+          "qty": 49,
+          "expiry": "2021-08-02",
+          "days_to_expiry": 664
+        }
+      ]
+    },
+    {
+      "product_id": 10,
+      "name": "Alprazolam 0.5mg tablets",
+      "pack": "x30",
+      "category": "N05B",
+      "category_name": "Anxiolytics",
+      "on_hand": 49,
+      "reorder_point": 30,
+      "cover_days": 14.8,
+      "batches": [
+        {
+          "batch_no": "B101",
+          "qty": 49,
+          "expiry": "2022-01-21",
+          "days_to_expiry": 836
+        }
+      ]
+    },
+    {
+      "product_id": 11,
+      "name": "Zolpidem 10mg tablets",
+      "pack": "x28",
+      "category": "N05C",
+      "category_name": "Hypnotics and sedatives",
+      "on_hand": 12,
+      "reorder_point": 8,
+      "cover_days": 33.6,
+      "batches": [
+        {
+          "batch_no": "B111",
+          "qty": 6,
+          "expiry": "2021-07-31",
+          "days_to_expiry": 662
+        },
+        {
+          "batch_no": "B112",
+          "qty": 6,
+          "expiry": "2022-11-24",
+          "days_to_expiry": 1143
+        }
+      ]
+    },
+    {
+      "product_id": 12,
+      "name": "Salbutamol 100mcg inhaler",
+      "pack": "200 dose",
+      "category": "R03",
+      "category_name": "Airway disease drugs",
+      "on_hand": 36,
+      "reorder_point": 44,
+      "cover_days": 9.5,
+      "batches": [
+        {
+          "batch_no": "B121",
+          "qty": 36,
+          "expiry": "2020-07-20",
+          "days_to_expiry": 286
+        }
+      ]
+    },
+    {
+      "product_id": 13,
+      "name": "Budesonide 200mcg inhaler",
+      "pack": "120 dose",
+      "category": "R03",
+      "category_name": "Airway disease drugs",
+      "on_hand": 8,
+      "reorder_point": 27,
+      "cover_days": 3.5,
+      "batches": [
+        {
+          "batch_no": "B131",
+          "qty": 3,
+          "expiry": "2019-12-11",
+          "days_to_expiry": 64
+        },
+        {
+          "batch_no": "B132",
+          "qty": 5,
+          "expiry": "2020-11-05",
+          "days_to_expiry": 394
+        }
+      ]
+    },
+    {
+      "product_id": 14,
+      "name": "Cetirizine 10mg tablets",
+      "pack": "x30",
+      "category": "R06",
+      "category_name": "Systemic antihistamines",
+      "on_hand": 13,
+      "reorder_point": 15,
+      "cover_days": 9.6,
+      "batches": [
+        {
+          "batch_no": "B141",
+          "qty": 8,
+          "expiry": "2021-01-30",
+          "days_to_expiry": 480
+        },
+        {
+          "batch_no": "B142",
+          "qty": 5,
+          "expiry": "2021-02-11",
+          "days_to_expiry": 492
+        }
+      ]
+    },
+    {
+      "product_id": 15,
+      "name": "Loratadine 10mg tablets",
+      "pack": "x30",
+      "category": "R06",
+      "category_name": "Systemic antihistamines",
+      "on_hand": 12,
+      "reorder_point": 9,
+      "cover_days": 14.7,
+      "batches": [
+        {
+          "batch_no": "B151",
+          "qty": 4,
+          "expiry": "2020-09-27",
+          "days_to_expiry": 355
+        },
+        {
+          "batch_no": "B152",
+          "qty": 8,
+          "expiry": "2020-04-14",
+          "days_to_expiry": 189
+        }
+      ]
+    }
+  ],
+  "low_stock": [
+    {
+      "product_id": 13,
+      "product": "Budesonide 200mcg inhaler",
+      "category": "R03",
+      "on_hand": 8,
+      "reorder_point": 27,
+      "suggested_order": 46,
+      "cover_days": 3.5
+    },
+    {
+      "product_id": 3,
+      "product": "Ibuprofen 400mg tablets",
+      "category": "M01AE",
+      "on_hand": 25,
+      "reorder_point": 26,
+      "suggested_order": 27,
+      "cover_days": 8.9
+    },
+    {
+      "product_id": 12,
+      "product": "Salbutamol 100mcg inhaler",
+      "category": "R03",
+      "on_hand": 36,
+      "reorder_point": 44,
+      "suggested_order": 52,
+      "cover_days": 9.5
+    },
+    {
+      "product_id": 14,
+      "product": "Cetirizine 10mg tablets",
+      "category": "R06",
+      "on_hand": 13,
+      "reorder_point": 15,
+      "suggested_order": 17,
+      "cover_days": 9.6
+    }
+  ],
+  "expiry": [
+    {
+      "product_id": 1,
+      "product": "Diclofenac 50mg tablets",
+      "category": "M01AB",
+      "batch_no": "B013",
+      "qty": 9,
+      "expiry": "2019-10-02",
+      "days_to_expiry": -6,
+      "severity": "expired"
+    },
+    {
+      "product_id": 8,
+      "product": "Paracetamol 120mg/5ml suspension",
+      "category": "N02BE",
+      "batch_no": "B082",
+      "qty": 69,
+      "expiry": "2019-10-02",
+      "days_to_expiry": -6,
+      "severity": "expired"
+    },
+    {
+      "product_id": 7,
+      "product": "Paracetamol 500mg capsules",
+      "category": "N02BE",
+      "batch_no": "B072",
+      "qty": 36,
+      "expiry": "2019-10-09",
+      "days_to_expiry": 1,
+      "severity": "urgent"
+    },
+    {
+      "product_id": 5,
+      "product": "Aspirin 300mg tablets",
+      "category": "N02BA",
+      "batch_no": "B051",
+      "qty": 34,
+      "expiry": "2019-11-02",
+      "days_to_expiry": 25,
+      "severity": "urgent"
+    },
+    {
+      "product_id": 13,
+      "product": "Budesonide 200mcg inhaler",
+      "category": "R03",
+      "batch_no": "B131",
+      "qty": 3,
+      "expiry": "2019-12-11",
+      "days_to_expiry": 64,
+      "severity": "soon"
+    }
+  ],
+  "counts": {
+    "low_stock": 4,
+    "expiring_soon": 1,
+    "expiring_urgent": 2,
+    "expired": 2
+  }
+}

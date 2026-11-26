@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" font-family="'IBM Plex Sans',Segoe UI,Arial,sans-serif">
+  <rect width="920" height="470" rx="14" fill="#f4f6f5"/>
+  <text x="32" y="42" font-size="20" font-weight="700" fill="#16211f">Pharos architecture</text>
+  <text x="32" y="64" font-size="13" fill="#4a5955">Train once, serialize, serve instant inference. The browser runs on precomputed data.</text>
+
+  <!-- defs -->
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" fill="#15736b"/>
+    </marker>
+    <style>
+      .box{fill:#ffffff;stroke:#dce3e1;rx:9}
+      .t{font-size:13px;font-weight:600;fill:#16211f}
+      .s{font-size:11px;fill:#74837e}
+      .accent{fill:#e5efed;stroke:#15736b}
+      .ln{stroke:#15736b;stroke-width:1.6;fill:none;marker-end:url(#a)}
+    </style>
+  </defs>
+
+  <!-- data -->
+  <rect class="box" x="32" y="100" width="170" height="78" rx="9"/>
+  <text class="t" x="48" y="128">Data</text>
+  <text class="s" x="48" y="147">salesdaily.csv</text>
+  <text class="s" x="48" y="162">8 ATC groups, 2106 days</text>
+
+  <!-- training -->
+  <rect class="box" x="262" y="78" width="210" height="122" rx="9"/>
+  <text class="t" x="278" y="104">Training (ml/)</text>
+  <text class="s" x="278" y="124">XGBoost forecasters x8</text>
+  <text class="s" x="278" y="141">IsolationForest + z-score</text>
+  <text class="s" x="278" y="158">TF-IDF knowledge index</text>
+  <text class="s" x="278" y="175">Inventory + alert rules</text>
+
+  <!-- artifacts -->
+  <rect class="box accent" x="532" y="100" width="166" height="78" rx="9"/>
+  <text class="t" x="548" y="128">Artifacts</text>
+  <text class="s" x="548" y="147">.joblib models</text>
+  <text class="s" x="548" y="162">precomputed .json</text>
+
+  <!-- backend -->
+  <rect class="box" x="532" y="250" width="356" height="92" rx="9"/>
+  <text class="t" x="548" y="276">Backend API</text>
+  <text class="s" x="548" y="296">FastAPI, loads artifacts at startup, Dockerized</text>
+  <text class="s" x="548" y="313">/forecast  /anomalies  /alerts  /assistant</text>
+  <text class="s" x="548" y="330">Assistant: Gemini when keyed, local RAG fallback</text>
+
+  <!-- frontend export -->
+  <rect class="box" x="262" y="250" width="210" height="92" rx="9"/>
+  <text class="t" x="278" y="276">Frontend export</text>
+  <text class="s" x="278" y="296">meta / series / anomalies</text>
+  <text class="s" x="278" y="313">inventory / knowledge</text>
+  <text class="s" x="278" y="330">~165 KB JSON</text>
+
+  <!-- static site -->
+  <rect class="box" x="32" y="250" width="170" height="92" rx="9"/>
+  <text class="t" x="48" y="276">Static dashboard</text>
+  <text class="s" x="48" y="296">GitHub Pages</text>
+  <text class="s" x="48" y="313">SVG charts,</text>
+  <text class="s" x="48" y="328">in-browser assistant</text>
+
+  <!-- arrows -->
+  <path class="ln" d="M202 139 L258 139"/>
+  <path class="ln" d="M472 139 L528 139"/>
+  <path class="ln" d="M615 178 L615 246"/>
+  <path class="ln" d="M532 300 L478 300" marker-end="url(#a)"/>
+  <path class="ln" d="M262 296 L206 296"/>
+  <path class="ln" d="M367 200 L367 246"/>
+
+  <text class="s" x="384" y="222" fill="#15736b">build</text>
+  <text class="s" x="486" y="292" fill="#15736b">same artifacts</text>
+</svg>

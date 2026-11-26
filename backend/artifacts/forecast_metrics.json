@@ -1,0 +1,167 @@
+{
+  "M01AB": {
+    "test_days": 120,
+    "model": {
+      "mae": 2.478,
+      "rmse": 3.059,
+      "mape": 81.5
+    },
+    "naive_persistence": {
+      "mae": 3.441,
+      "rmse": 4.283,
+      "mape": 101.93
+    },
+    "seasonal_naive": {
+      "mae": 3.331,
+      "rmse": 4.097,
+      "mape": 107.31
+    },
+    "mae_skill_vs_seasonal_naive_pct": 25.6,
+    "mean_daily_units": 5.03
+  },
+  "M01AE": {
+    "test_days": 120,
+    "model": {
+      "mae": 1.517,
+      "rmse": 1.923,
+      "mape": 93.33
+    },
+    "naive_persistence": {
+      "mae": 2.072,
+      "rmse": 2.614,
+      "mape": 102.48
+    },
+    "seasonal_naive": {
+      "mae": 2.012,
+      "rmse": 2.659,
+      "mape": 119.3
+    },
+    "mae_skill_vs_seasonal_naive_pct": 24.6,
+    "mean_daily_units": 3.9
+  },
+  "N02BA": {
+    "test_days": 120,
+    "model": {
+      "mae": 1.439,
+      "rmse": 1.903,
+      "mape": 106.06
+    },
+    "naive_persistence": {
+      "mae": 1.902,
+      "rmse": 2.52,
+      "mape": 136.07
+    },
+    "seasonal_naive": {
+      "mae": 1.965,
+      "rmse": 2.525,
+      "mape": 171.5
+    },
+    "mae_skill_vs_seasonal_naive_pct": 26.8,
+    "mean_daily_units": 3.88
+  },
+  "N02BE": {
+    "test_days": 120,
+    "model": {
+      "mae": 7.014,
+      "rmse": 9.451,
+      "mape": 36.29
+    },
+    "naive_persistence": {
+      "mae": 7.985,
+      "rmse": 10.323,
+      "mape": 39.54
+    },
+    "seasonal_naive": {
+      "mae": 8.863,
+      "rmse": 12.018,
+      "mape": 42.63
+    },
+    "mae_skill_vs_seasonal_naive_pct": 20.9,
+    "mean_daily_units": 29.92
+  },
+  "N05B": {
+    "test_days": 120,
+    "model": {
+      "mae": 2.929,
+      "rmse": 3.762,
+      "mape": 65.11
+    },
+    "naive_persistence": {
+      "mae": 3.872,
+      "rmse": 5.006,
+      "mape": 76.86
+    },
+    "seasonal_naive": {
+      "mae": 3.723,
+      "rmse": 4.663,
+      "mape": 68.01
+    },
+    "mae_skill_vs_seasonal_naive_pct": 21.3,
+    "mean_daily_units": 8.85
+  },
+  "N05C": {
+    "test_days": 120,
+    "model": {
+      "mae": 0.85,
+      "rmse": 1.198,
+      "mape": 66.6
+    },
+    "naive_persistence": {
+      "mae": 1.1,
+      "rmse": 1.713,
+      "mape": 92.87
+    },
+    "seasonal_naive": {
+      "mae": 1.167,
+      "rmse": 1.765,
+      "mape": 90.31
+    },
+    "mae_skill_vs_seasonal_naive_pct": 27.2,
+    "mean_daily_units": 0.59
+  },
+  "R03": {
+    "test_days": 120,
+    "model": {
+      "mae": 4.062,
+      "rmse": 6.091,
+      "mape": 135.85
+    },
+    "naive_persistence": {
+      "mae": 4.633,
+      "rmse": 7.644,
+      "mape": 170.76
+    },
+    "seasonal_naive": {
+      "mae": 5.0,
+      "rmse": 7.972,
+      "mape": 157.03
+    },
+    "mae_skill_vs_seasonal_naive_pct": 18.8,
+    "mean_daily_units": 5.51
+  },
+  "R06": {
+    "test_days": 120,
+    "model": {
+      "mae": 1.666,
+      "rmse": 2.244,
+      "mape": 61.01
+    },
+    "naive_persistence": {
+      "mae": 2.324,
+      "rmse": 3.008,
+      "mape": 80.05
+    },
+    "seasonal_naive": {
+      "mae": 2.585,
+      "rmse": 3.288,
+      "mape": 99.97
+    },
+    "mae_skill_vs_seasonal_naive_pct": 35.6,
+    "mean_daily_units": 2.9
+  },
+  "_summary": {
+    "avg_mae_skill_vs_seasonal_naive_pct": 25.1,
+    "n_categories": 8,
+    "train_days": 1986
+  }
+}

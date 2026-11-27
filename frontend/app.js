@@ -4,8 +4,8 @@
    look stays consistent. */
 
 const CATS = ["M01AB","M01AE","N02BA","N02BE","N05B","N05C","R03","R06"];
-const CAT_COLORS = {M01AB:"#15736b",M01AE:"#2e6f9e",N02BA:"#6e8b3d",N02BE:"#b4463c",
-                    N05B:"#7a6ca3",N05C:"#4c7a74",R03:"#c07b2e",R06:"#3f8e6e"};
+const CAT_COLORS = {M01AB:"#1a5c96",M01AE:"#37786e",N02BA:"#7f7a30",N02BE:"#b0533a",
+                    N05B:"#585a9c",N05C:"#3f7fae",R03:"#ab7a2a",R06:"#5f8a46"};
 const state = {};
 const $ = s => document.querySelector(s);
 const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -126,7 +126,7 @@ function barChart(svg, rows, opts={}){
   rows.forEach((r,i) => {
     const y = mT + i*bh;
     const bw = (w-mL-mR) * (r.value/max);
-    out += `<text x="${mL-10}" y="${(y+bh/2+3.5).toFixed(1)}" text-anchor="end" font-size="12.5" fill="${ink}">${r.label}</text>`;
+    out += `<text x="${mL-10}" y="${(y+bh/2+3.5).toFixed(1)}" text-anchor="end" font-size="12" fill="${ink}">${r.label}</text>`;
     out += `<rect x="${mL}" y="${(y+bh*0.18).toFixed(1)}" width="${Math.max(bw,1).toFixed(1)}" height="${(bh*0.64).toFixed(1)}" rx="3" fill="${r.color}"/>`;
     out += `<text x="${(mL+bw+8).toFixed(1)}" y="${(y+bh/2+3.5).toFixed(1)}" font-size="12" font-family="var(--mono)" fill="${ink3}">${opts.fmt?opts.fmt(r.value):fmt(r.value)}</text>`;
   });
@@ -170,11 +170,11 @@ function renderOverview(){
   // mix
   const mix = CATS.map(c=>({label:s[c].name, value:ov.mix90[c], color:CAT_COLORS[c]}))
                   .sort((a,b)=>b.value-a.value);
-  barChart($("#mixChart"), mix, {mL:150});
+  barChart($("#mixChart"), mix, {mL:178});
   // skill
   const skill = CATS.map(c=>({label:s[c].name, value:s[c].metrics.mae_skill_vs_seasonal_naive_pct, color:CAT_COLORS[c]}))
                     .sort((a,b)=>b.value-a.value);
-  barChart($("#skillChart"), skill, {mL:150, max:40, fmt:v=>"+"+v+"%"});
+  barChart($("#skillChart"), skill, {mL:178, max:40, fmt:v=>"+"+v+"%"});
 }
 
 function renderForecast(){
@@ -281,10 +281,10 @@ function renderAnomalies(){
   svg.innerHTML=out;
 
   $("#anTable").innerHTML =
-    `<thead><tr><th>Date</th><th>Group</th><th></th><th class="num">Sold</th><th class="num">Expected</th><th class="num">z-score</th></tr></thead><tbody>`+
+    `<thead><tr><th>Date</th><th>Group</th><th>Movement</th><th class="num">Sold</th><th class="num">Expected</th><th class="num">z-score</th></tr></thead><tbody>`+
     a.residual_top.slice(0,20).map(r=>`<tr><td class="mono" style="font-size:12.5px">${r.date}</td>`+
-      `<td>${r.category} <span class="muted" style="font-size:11px">${r.direction}</span></td>`+
       `<td><span class="tag cat">${r.category}</span></td>`+
+      `<td style="color:${r.direction==='spike'?cssVar('--danger'):cssVar('--info')}">${r.direction==='spike'?'Spike':'Drop'}</td>`+
       `<td class="num">${r.value}</td><td class="num">${r.expected}</td>`+
       `<td class="num" style="color:${r.direction==='spike'?cssVar('--danger'):cssVar('--info')}">${r.z>0?'+':''}${r.z}</td></tr>`).join("")+`</tbody>`;
 }
@@ -374,7 +374,7 @@ async function boot(){
     ["meta","series","anomalies","inventory","knowledge"].map(f=>fetch(`data/${f}.json`).then(r=>r.json())));
   state.meta=meta; state.series=series; state.anomalies=anomalies; state.inventory=inventory; state.knowledge=knowledge;
   state.metaSeason = c => meta.categories[c].seasonality;
-  $("#asofFoot").textContent="Data to "+meta.as_of;
+  $("#asofFoot").textContent=meta.as_of;
   $("#alertCount").textContent = meta.overview.n_low_stock + meta.overview.n_expiry || "";
   booted=true;
   const h = location.hash.slice(1);

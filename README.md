@@ -12,6 +12,18 @@ once and serialized, so both the API and the browser serve instant results.
 
 **Live dashboard:** https://mustafa-elsherif.github.io/pharos-demand-intelligence/
 
+![Pharos operations overview](docs/img/dashboard.png)
+
+<p align="center">
+  <img src="docs/img/forecast.png" width="49%" alt="Demand forecast with an uncertainty band">
+  <img src="docs/img/dashboard-dark.png" width="49%" alt="Operations overview in the dark theme">
+</p>
+
+The dashboard is a static front end built from precomputed model output. It reads
+plain JSON, draws its own SVG charts, and runs the assistant retrieval in the
+browser, so every section loads instantly with no backend call. Light and dark
+themes, responsive down to 320px.
+
 ![Architecture](docs/architecture.svg)
 
 ## What it does

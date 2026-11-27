@@ -7,15 +7,16 @@
 <meta name="description" content="Pharos forecasts pharmacy demand, flags low stock and expiring batches, detects unusual sales, and answers drug questions from a grounded knowledge base.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="assets/logo.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="app">
-  <aside class="rail">
+
+<header class="masthead">
+  <div class="mast-inner">
     <div class="brand">
-      <svg class="logo" viewBox="0 0 40 40" fill="none" stroke="currentColor" style="color:var(--primary)"
+      <svg class="logo" viewBox="0 0 40 40" fill="none" stroke="currentColor"
            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M14 11 L20 6 L26 11 Z" fill="currentColor"/>
         <path d="M14 11 L26 11"/>
@@ -26,164 +27,157 @@
       </svg>
       <div>
         <div class="name">Pharos</div>
-        <div class="sub">Demand intelligence</div>
+        <div class="sub">Pharmacy demand intelligence</div>
       </div>
     </div>
-
-    <nav class="nav" aria-label="Sections">
-      <button data-panel="overview" aria-current="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 13h4l2 5 4-14 2 9h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Overview</button>
-      <button data-panel="forecast">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 18 9 11l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Forecast</button>
-      <button data-panel="alerts">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 3 20h18L12 3Z" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke-linecap="round"/></svg>
-        Alerts <span class="kbd" id="alertCount"></span></button>
-      <button data-panel="anomalies">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h4l2-6 3 14 3-10 2 4h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Anomalies</button>
-      <button data-panel="assistant">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v11H9l-5 4V5Z" stroke-linejoin="round"/></svg>
-        Assistant</button>
-    </nav>
-
-    <div class="foot">
-      <div class="status"><span class="dot"></span><span id="engineLabel">Local models loaded</span></div>
-      <div id="asofFoot"></div>
-      <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
+    <div class="mast-right">
+      <div class="asof-top">Latest data<b id="asofFoot"></b></div>
+      <button class="theme-toggle" id="themeBtn" aria-label="Switch colour theme">
         <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A8 8 0 1 1 11 3a6 6 0 0 0 10 9.8Z" stroke-linejoin="round"/></svg>
         <span id="themeLabel">Dark</span>
       </button>
     </div>
-  </aside>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <button data-panel="overview" aria-current="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 13h4l2 5 4-14 2 9h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Overview</button>
+    <button data-panel="forecast">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 18 9 11l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Forecast</button>
+    <button data-panel="alerts">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 3 20h18L12 3Z" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke-linecap="round"/></svg>
+      Stock alerts <span class="kbd" id="alertCount"></span></button>
+    <button data-panel="anomalies">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h4l2-6 3 14 3-10 2 4h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Unusual sales</button>
+    <button data-panel="assistant">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v11H9l-5 4V5Z" stroke-linejoin="round"/></svg>
+      Assistant</button>
+  </nav>
+</header>
 
-  <main class="main">
-    <div class="wrap">
+<main class="main">
+  <div class="wrap">
 
-      <!-- OVERVIEW -->
-      <section class="panel active" id="overview">
-        <div class="phead">
-          <div>
-            <h1>Operations overview</h1>
-            <p>Forecasts, stock risk and unusual sales across eight drug groups, drawn from six years of daily dispensing data.</p>
-          </div>
-          <div class="asof" id="asof1"></div>
+    <!-- OVERVIEW -->
+    <section class="panel active" id="overview">
+      <div class="phead">
+        <h1>Operations overview</h1>
+        <p>Demand, stock risk and unusual sales across eight drug groups, built from six years of daily dispensing records.</p>
+        <div class="asof" id="asof1"></div>
+      </div>
+      <div class="readouts" id="readouts"></div>
+      <div class="stack">
+        <div class="card">
+          <div class="hd"><h2>Total weekly demand</h2><span class="note">Units dispensed per week, full history with a 30 day outlook</span></div>
+          <div class="bd"><svg class="chart" id="trendChart" height="300" role="img" aria-label="Weekly demand trend"></svg>
+            <div class="legend" id="trendLegend"></div></div>
         </div>
-        <div class="readouts" id="readouts"></div>
-        <div class="stack">
+        <div class="grid2">
           <div class="card">
-            <div class="hd"><h2>Total weekly demand</h2><span class="note">Units dispensed per week, full history with 30 day outlook</span></div>
-            <div class="bd"><svg class="chart" id="trendChart" height="300" role="img" aria-label="Weekly demand trend"></svg>
-              <div class="legend" id="trendLegend"></div></div>
-          </div>
-          <div class="grid2">
-            <div class="card">
-              <div class="hd"><h2>Demand mix</h2><span class="note">Share of last 90 days</span></div>
-              <div class="bd"><svg class="chart" id="mixChart" height="260" role="img" aria-label="Demand mix by group"></svg></div>
-            </div>
-            <div class="card">
-              <div class="hd"><h2>Forecast accuracy</h2><span class="note">MAE improvement over seasonal baseline</span></div>
-              <div class="bd"><svg class="chart" id="skillChart" height="260" role="img" aria-label="Forecast skill by group"></svg></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FORECAST -->
-      <section class="panel" id="forecast">
-        <div class="phead">
-          <div>
-            <h1>Demand forecast</h1>
-            <p>Gradient boosted model per group, rolled forward day by day. The shaded band is the measured 80 percent error range from a held out test.</p>
-          </div>
-          <div class="asof" id="asof2"></div>
-        </div>
-        <div class="card stack-card">
-          <div class="hd">
-            <div class="seg" id="catSeg" role="group" aria-label="Drug group"></div>
-            <div class="seg" id="horizonSeg" role="group" aria-label="Horizon">
-              <button data-h="14" aria-pressed="true">14 days</button>
-              <button data-h="30" aria-pressed="false">30 days</button>
-            </div>
-          </div>
-          <div class="bd">
-            <svg class="chart" id="fcChart" height="320" role="img" aria-label="Forecast chart"></svg>
-            <div class="legend" id="fcLegend"></div>
-          </div>
-        </div>
-        <div class="readouts" id="fcReadouts" style="margin-top:18px"></div>
-        <div class="note-box" id="fcNote" style="margin-top:18px"></div>
-      </section>
-
-      <!-- ALERTS -->
-      <section class="panel" id="alerts">
-        <div class="phead">
-          <div>
-            <h1>Stock alerts</h1>
-            <p>Reorder points are forecast demand over the 7 day supplier lead time plus safety stock for a 95 percent service level. Expiry is tracked per batch.</p>
-          </div>
-          <div class="asof" id="asof3"></div>
-        </div>
-        <div class="readouts" id="alertReadouts"></div>
-        <div class="grid2" style="align-items:start">
-          <div class="card">
-            <div class="hd"><h2>Restock now</h2><span class="note" id="lowCount"></span></div>
-            <div class="bd" style="padding:0"><table id="lowTable"></table></div>
+            <div class="hd"><h2>Demand mix</h2><span class="note">Share of the last 90 days</span></div>
+            <div class="bd"><svg class="chart" id="mixChart" height="260" role="img" aria-label="Demand mix by group"></svg></div>
           </div>
           <div class="card">
-            <div class="hd"><h2>Expiring batches</h2><span class="note" id="expCount"></span></div>
-            <div class="bd" style="padding:0"><table id="expTable"></table></div>
+            <div class="hd"><h2>Forecast accuracy</h2><span class="note">Lower error than the seasonal baseline</span></div>
+            <div class="bd"><svg class="chart" id="skillChart" height="260" role="img" aria-label="Forecast accuracy by group"></svg></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ANOMALIES -->
-      <section class="panel" id="anomalies">
-        <div class="phead">
-          <div>
-            <h1>Unusual sales</h1>
-            <p>Two views: a robust z-score against each group's recent normal, and an isolation forest over the whole product mix for whole day outliers.</p>
+    <!-- FORECAST -->
+    <section class="panel" id="forecast">
+      <div class="phead">
+        <h1>Demand forecast</h1>
+        <p>A gradient boosted model per group, rolled forward one day at a time. The shaded band is the measured 80 percent error range from a held out test.</p>
+        <div class="asof" id="asof2"></div>
+      </div>
+      <div class="card">
+        <div class="hd">
+          <div class="seg" id="catSeg" role="group" aria-label="Drug group"></div>
+          <div class="seg" id="horizonSeg" role="group" aria-label="Horizon">
+            <button data-h="14" aria-pressed="true">14 days</button>
+            <button data-h="30" aria-pressed="false">30 days</button>
           </div>
-          <div class="asof" id="asof4"></div>
         </div>
-        <div class="card" style="margin-bottom:18px">
-          <div class="hd"><h2>Unusual days over time</h2><span class="note" id="anCount"></span></div>
-          <div class="bd"><svg class="chart" id="anChart" height="150" role="img" aria-label="Unusual days timeline"></svg></div>
+        <div class="bd">
+          <svg class="chart" id="fcChart" height="320" role="img" aria-label="Forecast chart"></svg>
+          <div class="legend" id="fcLegend"></div>
+        </div>
+      </div>
+      <div class="readouts" id="fcReadouts" style="margin-top:20px"></div>
+      <div class="note-box" id="fcNote" style="margin-top:20px"></div>
+    </section>
+
+    <!-- ALERTS -->
+    <section class="panel" id="alerts">
+      <div class="phead">
+        <h1>Stock alerts</h1>
+        <p>Reorder points cover forecast demand over the 7 day supplier lead time plus safety stock for a 95 percent service level. Expiry is tracked batch by batch.</p>
+        <div class="asof" id="asof3"></div>
+      </div>
+      <div class="readouts" id="alertReadouts"></div>
+      <div class="grid2" style="align-items:start">
+        <div class="card">
+          <div class="hd"><h2>Restock now</h2><span class="note" id="lowCount"></span></div>
+          <div class="bd tablebd"><div class="table-wrap"><table id="lowTable"></table></div></div>
         </div>
         <div class="card">
-          <div class="hd"><h2>Largest deviations by group</h2><span class="note">Ranked by z-score</span></div>
-          <div class="bd" style="padding:0"><table id="anTable"></table></div>
+          <div class="hd"><h2>Expiring batches</h2><span class="note" id="expCount"></span></div>
+          <div class="bd tablebd"><div class="table-wrap"><table id="expTable"></table></div></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ASSISTANT -->
-      <section class="panel" id="assistant">
-        <div class="phead">
-          <div>
-            <h1>Drug information assistant</h1>
-            <p>Answers are grounded in the pharmacy knowledge base and cite their sources. Personal dosing and diagnosis questions are declined by design.</p>
-          </div>
-          <div class="asof" id="asof5"></div>
-        </div>
-        <div class="card">
-          <div class="chat">
-            <div class="log" id="chatLog" aria-live="polite"></div>
-            <div class="chips" id="chips"></div>
-            <form class="bar" id="chatForm">
-              <input id="chatInput" placeholder="Ask about a drug group, storage, seasonality, or how a feature works" autocomplete="off" aria-label="Your question">
-              <button class="btn" type="submit">Ask</button>
-            </form>
-          </div>
-        </div>
-        <div class="note-box" style="margin-top:16px">
-          This live demo runs the retrieval and grounding in your browser. Connect the Pharos API with a Gemini key to add fluent multilingual generation; the local fallback still answers and cites sources with no key.
-        </div>
-      </section>
+    <!-- ANOMALIES -->
+    <section class="panel" id="anomalies">
+      <div class="phead">
+        <h1>Unusual sales</h1>
+        <p>Two views: a robust z-score against each group's recent normal, and an isolation forest across the whole product mix to catch whole days that look odd.</p>
+        <div class="asof" id="asof4"></div>
+      </div>
+      <div class="card" style="margin-bottom:20px">
+        <div class="hd"><h2>Unusual days over time</h2><span class="note" id="anCount"></span></div>
+        <div class="bd"><svg class="chart" id="anChart" height="150" role="img" aria-label="Unusual days timeline"></svg></div>
+      </div>
+      <div class="card">
+        <div class="hd"><h2>Largest deviations by group</h2><span class="note">Ranked by z-score</span></div>
+        <div class="bd tablebd"><div class="table-wrap"><table id="anTable"></table></div></div>
+      </div>
+    </section>
 
-    </div>
-  </main>
-</div>
+    <!-- ASSISTANT -->
+    <section class="panel" id="assistant">
+      <div class="phead">
+        <h1>Drug information assistant</h1>
+        <p>Answers come from the pharmacy knowledge base and cite their sources. Questions about personal doses or diagnosis are declined by design.</p>
+        <div class="asof" id="asof5"></div>
+      </div>
+      <div class="card">
+        <div class="chat">
+          <div class="log" id="chatLog" aria-live="polite"></div>
+          <div class="chips" id="chips"></div>
+          <form class="bar" id="chatForm">
+            <input id="chatInput" placeholder="Ask about a drug group, storage, seasonality, or how a feature works" autocomplete="off" aria-label="Your question">
+            <button class="btn" type="submit">Ask</button>
+          </form>
+        </div>
+      </div>
+      <div class="note-box" style="margin-top:18px">
+        This demo runs retrieval and grounding in your browser. Connect the Pharos API with a Gemini key to add fluent multilingual generation. The local fallback still answers and cites its sources with no key.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="pagefoot">
+  <span class="status"><span class="dot"></span><span id="engineLabel">Local models loaded</span></span>
+  <span>Pharos runs on pre-trained, serialized models, so results load instantly.</span>
+</footer>
+
 <div class="tooltip" id="tip"></div>
 <script src="app.js"></script>
 </body>
